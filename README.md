@@ -65,36 +65,11 @@ php bin/magento setup:di:compile
 **The amount, address and name appear to cache upon a checkout**
 Are you using the latest version of this module which fixes this issue?
 
-Rebrand Instructions
---------------------
-
-The module does not require any editing of file to be used. The options can be changed via the plugin settings.
-However, you can pre set the module default by following these instructions.
-
-1. Update module defaults, located in `httpdocs/app/PaymentGateway/etc/config.xml`
-   
-    it is safe to update following options: [`title`, `merchant_id`, `merchant_shared_key`, `integration_type`]
-    
-    **Note:** for `integration_type` available options are [`hosted`, `iframe`, `hosted_modal`, `direct`]
-    
-
-2. Update label from `httpdocs/app/PaymentGateway/etc/adminhtml/system.xml` to change how the Magento will show your Payment Method
-    
-    ```
-     ...
-     <group id="P3_PaymentGateway" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
-        
-         <label>My Custom Name</label>
-        
-        <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
-     ....
-
-    ```
     
 Setup Instructions
 --------------------    
     
-Setting up the module requires at a minimum a merchantID, a signature/secret key and a gateway URL i.e. https://gateway.example.com to be entered in the plugin's settings.
+Setting up the module requires at a minimum a merchantID, a signature/secret key and a gateway URL i.e. https://gateway.firstpayments.co.uk to be entered in the plugin's settings.
 
 You will then need to select an integration type to use.
 
